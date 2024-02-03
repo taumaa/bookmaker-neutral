@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmaker Calculator",
+  "version": "1.0",
+  "description": "Calculate neutral odds for bookmaker.xyz",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://bookmaker.xyz/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

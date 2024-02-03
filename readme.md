@@ -1,0 +1,1 @@
+A bookmaker.xyz extension to add neutral loss for each match (betting on each scenario)
