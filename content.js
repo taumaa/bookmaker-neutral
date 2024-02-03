@@ -33,10 +33,8 @@ function checkClearInterval() {
     const selector = '.mt-4.bg-80.rounded-8.ds\\:flex.ds\\:items-center.ds\\:h-56.ds\\:p-8';
     const divs = document.querySelectorAll(selector);
 
-    console.log(`Vérification...`);
     // Si au moins une div est trouvée
     if (divs.length > 0) {
-        console.log(`Nombre de divs récupérées : ${divs.length}`);
         // Arrête l'intervalle
         clearInterval(intervalId);
 
