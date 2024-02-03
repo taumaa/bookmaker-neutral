@@ -23,6 +23,13 @@ const calculateNeutralLoss = (div) => {
     const text = document.createElement('span');
     text.style.color = '#ee4747';
     text.textContent = ` ${neutralLoss.toFixed(2)}$ loss (1500$ bet)`;
+    text.classList.add('neutral-loss');
+
+    // If the span already exists, we return
+    if (div.querySelector('.neutral-loss')) {
+        return
+    }
+
     div.querySelector('.block.text-label.font-medium.text-white').appendChild(text);
 
 
@@ -35,8 +42,6 @@ function checkClearInterval() {
 
     // Si au moins une div est trouvée
     if (divs.length > 0) {
-        // Arrête l'intervalle
-        clearInterval(intervalId);
 
         // Pour chaque div
         divs.forEach(div => {
@@ -47,4 +52,4 @@ function checkClearInterval() {
 }
 
 // Stocke l'ID de l'intervalle pour pouvoir l'arrêter plus tard
-let intervalId = setInterval(checkClearInterval, 5000);
+let intervalId = setInterval(checkClearInterval, 4000);
